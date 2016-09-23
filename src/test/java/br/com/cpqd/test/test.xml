@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+		<database>
+			<sgbd>oracle</sgbd>
+			<url>jdbc:oracle:thin:@cidra.cpqd.com.br:1521:cidr10i1</url>
+			<user>SUPN3_GUA</user>
+			<password>SUPN3_GUA</password>
+		</database>
+
+	<file delimiter="|">
+	<name>./generated/testFileGenerated.txt</name>
+	<files>1</files>
+		<header lines="1">
+			<field size="3" name="NUMBER">numero=0,9</field>
+			<field size="21" name="NAME">fixed=testFileGenerated.txt</field>
+			<field size="6" name="HEADER">fixed=HEADER</field>
+			<field size="25" name="TODAY">agora=dd/MM/yyyy HH:mm:ss.SS</field>
+		</header>
+	
+		<trail lines="10">
+			<field size="5" name="zeros">zeros</field>
+			<field size="5" name="vazios">vazio</field>
+			<field size="5" name="NUMERO">numero=0,9</field>
+			<field size="5" name="NUM_NULL">numeroEvazio=0,9</field>
+			<field size="5" name="NUMERO_SEQ">numerosequencial=0,#,></field>
+			<field size="5" name="MASK">mascara=#####</field>
+			<field size="5" name="MASK_SEQ">mascarasequencial=#####</field>
+			<field size="5" name="TEXT">texto</field>
+			<field size="5" name="TEXT_NULL">textoEvazio</field>
+			<field size="5" name="DOMAIN">dominio=ABCDE,abcde,12345</field>
+			<field size="5" name="FIXED">fixed=fixed</field>
+			<field size="6" name="HOUR_VALID">horaValida=HHmmss</field>
+			<field size="6" name="HOUR_INVALID">horaInvalida=HHmmss</field>
+			<field size="6" name="FUTURE_HOUR_VALID">horaValidaFuturo=HHmmss, 3</field>
+			<field size="6" name="PAST_HOUR_VALID">horaValidaPassado=HHmmss, 3</field>
+			<field size="8" name="PAST_DATE_VALID">dataValidaPassado=ddMMyyyy</field>
+			<field size="8" name="FUTURE_DATE_VALID">dataValidaFuturo=ddMMyyyy</field>
+			<field size="8" name="DATE_INVALID">dataInvalida=ddMMyyyy</field>
+			<field size="8" name="NOW">agora=ddMMyyyy</field>
+			<field size="8" name="PERIOD">periodo=ddMMyyyy, hoje-10, hoje</field>
+			<field size="11" name="CPF">cpf</field>
+			<field size="14" name="CPF_DOT">cpfPonto</field>
+			<field size="14" name="CNPJ">cnpj</field>
+			<field size="18" name="CNPJ_DOT">cnpjPonto</field>
+			<field size="5" name="MISC">misc={numero=0,9; texto; fixed=misc!}</field>
+			<field size="5" name="CALC">calc=4+4</field>
+			<field size="5" name="VALUE" var="t_value">mascara=#.##</field>
+			<field size="5" name="COUNT" var="t_count">numero=1,9</field>
+			<field size="10" name="SQUARED_SUM">calc=('$t_value'^2)/'$t_count'</field>
+		</trail>
+		
+		<footer lines="1">
+			<field size="6" name="FOOTER">fixed=FOOTER</field>
+			<field size="3" name="NUMBER">numero=0,9</field>
+			<field size="21" name="NAME">fixed=testFileGenerated.txt</field>
+			<field size="25" name="TODAY">agora=dd/MM/yyyy HH:mm:ss.SS</field>
+		</footer>
+	</file>
+</template>
+

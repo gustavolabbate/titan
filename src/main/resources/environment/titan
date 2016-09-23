@@ -1,0 +1,27 @@
+#!/bin/sh
+
+if [ -z $JAVA_HOME ] ; then
+                echo "JAVA_HOME not defined. Please set it in your environment"
+                exit 1
+fi
+
+if [ ! -z $1 ] ; then
+        LOAD_XML=$1
+else
+        echo "You must inform the layout xml."
+        exit 1
+fi
+
+
+if [ -z $TITAN_HOME ] ; then
+		echo "TITAN_HOME not defined. Please set it in your environment"
+		exit 1
+fi
+
+export VERSION=`ls $TITAN_HOME/titan*.jar`
+
+if [ ! -z $VERSION ] ; then
+	$JAVA_HOME/bin/java -jar -Xms512m -Xmx1024m -Dcom.sun.management.jmxremote $VERSION $LOAD_XML $2 $VERSION 
+else
+	echo "can't find executable jar in $TITAN_HOME"
+fi

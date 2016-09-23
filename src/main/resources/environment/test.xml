@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<database>
+		<host></host>
+		<port></port>
+		<instance></instance>
+		<user></user>
+		<password></password>
+	</database>
+
+	<file>
+		<name>file1.txt</name>
+		<header lines="5">
+			<field size="1">numerosequencial=1</field>
+			<field size="6">fixed=HEADER</field>
+			<field size="10">zeros</field>
+			<field size="10">vazio</field>
+			<field size="10">numero=0,9</field>
+		</header>
+		<trail lines="10">
+			<field size="10">zeros</field>
+			<field size="10">vazio</field>
+			<field size="10">numero=0,9</field>
+			<field size="10">numeroEvazio=0,9</field>
+			<field size="10">texto</field>
+			<field size="10">textoEvazio</field>
+			<field size="13">mascara=(##)####-####</field>
+			<field size="10">fixo=teste</field>
+			<field size="8">horaValida=HH:mm:ss</field>
+			<field size="8">dataValida=yyyyMMdd</field>
+			<field size="6">horaInvalida=HHmmss</field>
+			<field size="4">horaInvalida=HHmm</field>
+			<field size="8">dataInvalida=ddMMyyyy</field>
+			<field size="8">dataInvalida=yyyyMMdd</field>
+			<field size="8">dataInvalida=yyyyddMM</field>
+			<field size="6">dataInvalida=yyMMdd</field>
+			<field size="8">datavalidaFuturo=yyyyMMdd</field>
+			<field size="8">datavalidaPassado=yyyyMMdd</field>
+			<field size="8">horaValidaPassado=HH:mm:ss,3</field>
+			<field size="8">horaValidaFuturo=HH:mm:ss,3</field>
+			<field size="8">agora=yyyyMMdd</field>
+			<field size="8">agora=HH:mm:ss</field>
+			<field size="20">arquivo=meses</field>
+			<field size="5">numerosequencial=1</field>
+			<field size="10">mascarasequencial=911#0####</field>
+		</trail>
+		<footer lines="3">
+			<field size="1">numerosequencial=1</field>
+			<field size="6">fixed=FOOTER</field>
+			<field size="8">agora=yyyyMMdd</field>
+			<field size="10">vazio</field>
+			<field size="8">agora=HH:mm:ss</field>
+			<field size="0" name="cria_variavel" var="blah">cpf</field>
+			<field size="10" name="espaco">vazio</field>
+			<field size="10" name="usa_mesma_variavel" var="blah" />
+		</footer>
+	</file>
+
+	<file delimiter=";">
+		<name>file1.txt</name>
+		<trail lines="10" shuffle="false">
+			<field size="9">misc={numerosequencial=9520}</field>
+			<field size="5">misc={numerosequencial=0020}</field>
+		</trail>
+	</file>
+
+</template>
