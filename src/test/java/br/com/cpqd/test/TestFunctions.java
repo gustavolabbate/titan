@@ -264,13 +264,13 @@ public class TestFunctions {
 		String ret;
                 
                 //
-                ret = functions.Asis("myString", 8);
+                ret = functions.asis("myString", 8);
                 assertEquals("fail on generating equals string", "myString", ret);
                 
-                ret = functions.Asis("myString", 4);
+                ret = functions.asis("myString", 4);
                 assertEquals("fail on trimming string", "ring", ret);
                 
-                ret = functions.Asis("myString", 10);
+                ret = functions.asis("myString", 10);
                 assertEquals("fail on filling string", "  myString", ret);
                 
 	}

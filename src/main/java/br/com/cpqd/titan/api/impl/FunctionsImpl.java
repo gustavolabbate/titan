@@ -476,7 +476,13 @@ public class FunctionsImpl implements FunctionsFacade {
         return z;
     }
 
-    public synchronized String Asis(String values, int size) {
+    /**
+     * Bla Bla Bla
+     * @param values
+     * @param size
+     * @return 
+     */
+    public synchronized String asis(String values, int size) {
         return fill(values, size, null, null);
 
     }

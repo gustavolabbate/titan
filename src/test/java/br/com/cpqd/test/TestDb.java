@@ -12,6 +12,7 @@ import org.junit.Test;
 import br.com.cpqd.titan.utils.DBConnection;
 import br.com.cpqd.titan.utils.DataBase;
 
+@Ignore
 public class TestDb {
 
 	private DataBase db;

@@ -142,7 +142,7 @@ public class FunctionsProcessor {
                 String[] val = value.split(",");
                 field = functionsProvider.fixed(val, size);
             } else if (function.toLowerCase().equals("fixed")) {
-                field.add(functionsProvider.Asis(value, size));
+                field.add(functionsProvider.asis(value, size));
             } else if (function.toLowerCase().equals("horavalida")) {
                 field = functionsProvider.hourValid(value);
             } else if (function.toLowerCase().equals("datavalida")) {

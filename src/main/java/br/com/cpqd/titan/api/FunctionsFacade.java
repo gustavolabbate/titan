@@ -55,7 +55,7 @@ public interface FunctionsFacade {
 
     ArrayList<String> fixed(String[] values, int size);
 
-    String Asis(String values, int size);
+    String asis(String values, int size);
 
     ArrayList<String> hourValid(String format) throws Exception;
 

@@ -1,0 +1,18 @@
+Create new file file1.txt delimited with ";"
+Header with 5 lines
+    field with size 1 using numerosequencial
+    field with size 6 using fixed=HEADER
+    field with size 10 using zeros
+    field with size 10 using vazio
+    field with size 10 using numero=0,9
+trail with 10 lines
+    field with size 10 using zeros
+    field with size 10 using mascara=(##)####-####
+footer with 3 lines
+    field with size 1 using numerosequencial=1
+    field with size 6 using fixed=FOOTER
+    field with size 8 using agora=yyyyMMdd
+    field with size 8 using agora=HH:mm:ss
+    field with size 0 creating var bla using cpf
+    field with size 10 using vazio
+    field with size 10 named "use_same_var" using var=bla
