@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>br.com.cpqd</groupId>
+    <groupId>org.titan</groupId>
     <artifactId>titan</artifactId>
     <version>1.6-SNAPSHOT</version>
     <name>titan</name>
@@ -11,7 +11,7 @@
         <maven.build.timestamp.format>dd.MM.yyyy HH:mm:ss</maven.build.timestamp.format>
         <buildNumber>${maven.build.timestamp}</buildNumber>
         <final.name>titan</final.name>
-        <Created-By>CPqD</Created-By>
+        <Created-By>gustavolabbate@gmail.com</Created-By>
         <code-name>oceanus</code-name>
         <class-path>lib/classes12.jar lib/ojdbc14.jar lib/sqljdbc.jar lib/mysql-connector-java-5.1.7-bin.jar lib/jep-2.24.jar lib/log4j-1.2.17.jar</class-path>
         <zip.dir.package>titan-${project.version}</zip.dir.package>
@@ -35,7 +35,7 @@
                     <archive>
                         <manifest>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <mainClass>br.com.cpqd.titan.main.Generate</mainClass>
+                            <mainClass>org.titan.main.Generate</mainClass>
                         </manifest>
                         <manifestEntries>
                             <final-version>${project.version}</final-version>
@@ -217,14 +217,4 @@
 
 
     </dependencies>
-
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>dsda-snapshot-repo</id>
-            <name>titan</name>
-            <url>http://nexus.cpqd.com.br:8081/nexus/content/repositories/dsda-snapshot/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
 </project>
